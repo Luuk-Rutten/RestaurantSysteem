@@ -1,0 +1,40 @@
+﻿<Window x:Class="RestaurantSysteem.TafelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantSysteem"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Tafel nr.01" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="LanguageComboBox" HorizontalAlignment="Left" Margin="111,85,0,0" VerticalAlignment="Top" SelectionChanged="LanguageComboBox_SelectionChanged" SelectedIndex="1">
+
+        </ComboBox>
+        <ComboBox x:Name="WinePairingComboBox" HorizontalAlignment="Left" Margin="111,122,0,0" VerticalAlignment="Top" SelectionChanged="WinePairingComboBox_SelectionChanged" SelectedIndex="1">
+            <ComboBoxItem Content="Geen winepairing"/>
+            <ComboBoxItem Content="Winepairing"/>
+        </ComboBox>
+        <Label x:Name="Titel_tafel" Content="Tafel Nr. xx" HorizontalAlignment="Left" Margin="25,20,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Button x:Name="Terug" Content="Terug" HorizontalAlignment="Left" Margin="675,58,0,0" VerticalAlignment="Top" Width="75" Click="ButtonTerug"/>
+        <Button Content="Verstuur Keuken" HorizontalAlignment="Left" Height="29" Margin="535,346,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click_verstuurkeuken"/>
+        <ListView x:Name="ListView"  HorizontalAlignment="Left" Height="219" Margin="430,0,0,0" VerticalAlignment="Center" Width="210" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Welke taal?" HorizontalAlignment="Left" Height="36" Margin="22,83,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button Content="+" HorizontalAlignment="Left" Height="38" Margin="645,138,0,0" VerticalAlignment="Top" Width="28" Click="Button_Ophogen_Click"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="36" Margin="645,181,0,0" VerticalAlignment="Top" Width="28" Click="Button_Verminderen_Click"/>
+        <Button x:Name="ButtonVerwijder" Content="Verwijderen" HorizontalAlignment="Left" Height="29" Margin="645,222,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click_Verwijder"/>
+        <Label Content="Winepairing?" HorizontalAlignment="Left" Height="36" Margin="22,116,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label Content="Aantal pers." HorizontalAlignment="Left" Margin="22,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TbPersonen"  HorizontalAlignment="Left" Margin="111,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" MaxLength="2" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="TbAllergie" HorizontalAlignment="Left" Margin="111,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" TextChanged="TbAllergie_TextChanged"/>
+        <Label Content="Allergieen:" HorizontalAlignment="Left" Margin="22,181,0,0" VerticalAlignment="Top" Width="72"/>
+        <ComboBox x:Name="MenuComboBox" HorizontalAlignment="Left" Height="25" Margin="269,120,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="AddMenuButton" Content="Toevoegen >" HorizontalAlignment="Left" Height="28" Margin="354,118,0,0" VerticalAlignment="Top" Width="71" Click="AddMenuButton_Click"/>
+    </Grid>
+</Window>

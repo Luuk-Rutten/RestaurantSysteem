@@ -1,0 +1,50 @@
+﻿<Window x:Name="Keuken1" x:Class="RestaurantSysteem.Keuken"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantSysteem"
+        mc:Ignorable="d"
+        Title="Keuken" Height="738" Width="642">
+
+    <Grid Margin="0,0,0,12">
+        <Grid.Background>
+            <ImageBrush ImageSource="/augustine-wong-li0iC0rjvvg-unsplash.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="18,75,0,0">
+            <TextBlock x:Name="TbAantalPers" Text="" Margin="5" Height="16"/>
+            <TextBlock x:Name="TbTaal" Text="" Margin="5" Width="214"  />
+            <TextBlock x:Name="TbWijn" Text=" " Margin="5"/>
+            <StackPanel Margin="5" x:Name="MenusStackPanel">
+                <TextBlock x:Name="Menu" Text="Menu's:" FontWeight="Bold" Width="213"/>
+
+            </StackPanel>
+            <StackPanel Margin="5"/>
+            <StackPanel Margin="5"/>
+        </StackPanel>
+        <StackPanel Margin="9,281,0,10">
+            <StackPanel Margin="5" x:Name="VoorgerechtStackPanel">
+                <TextBlock Text="Voorgerecht: " FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Margin="5" x:Name="TussengerechtStackPanel">
+                <TextBlock Text="Tussengerecht: " FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Margin="5" x:Name="HoofdgerechtStackPanel">
+                <TextBlock Text="Hoofdgerecht: " FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Margin="5" x:Name="NagerechtStackPanel">
+                <TextBlock Text="Nagerecht: " FontWeight="Bold"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="8,10,1,235">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="5"/>
+            <Border BorderBrush="Black" BorderThickness="1" Margin="5"/>
+            <TextBlock x:Name="TbTafelnr" Text="" FontWeight="Bold" Width="217" />
+            <TextBlock x:Name="TbAllergieen" FontSize="14" Text="" Width="210" FontWeight="Bold" Height="20" />
+        </StackPanel>
+    </Grid>
+</Window>
